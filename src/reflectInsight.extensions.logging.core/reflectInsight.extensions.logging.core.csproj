@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <AssemblyName>ReflectInsight.Extensions.Logging</AssemblyName>
+    <RootNamespace>ReflectInsight.Extensions.Logging</RootNamespace>
+    <PackageId>ReflectInsight.Extensions.Logging.Core</PackageId>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Version>1.0.0-beta</Version>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\ReflectSoftware.licenseheader" Link="ReflectSoftware.licenseheader" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="2.2.0" />
+    <PackageReference Include="Plato.NetCore" Version="2019.2.6.3" />
+    <PackageReference Include="ReflectInsight.Core" Version="6.0.0-beta" />
+  </ItemGroup>
+
+</Project>
