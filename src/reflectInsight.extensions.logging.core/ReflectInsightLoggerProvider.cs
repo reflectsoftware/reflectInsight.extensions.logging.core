@@ -4,6 +4,7 @@
 
 using Microsoft.Extensions.Logging;
 using ReflectSoftware.Insight;
+using System;
 
 namespace ReflectInsight.Extensions.Logging
 {
@@ -19,7 +20,8 @@ namespace ReflectInsight.Extensions.Logging
         /// <param name="configFile">The configuration file.</param>
         public ReflectInsightLoggerProvider(string configFile = "ReflectInsight.config")
         {
-            ReflectInsightConfig.Control.SetExternalConfigurationMode(configFile);
+            var config = $"{AppDomain.CurrentDomain.BaseDirectory}{configFile}";
+            ReflectInsightConfig.Control.SetExternalConfigurationMode(config);
         }
 
         /// <summary>
