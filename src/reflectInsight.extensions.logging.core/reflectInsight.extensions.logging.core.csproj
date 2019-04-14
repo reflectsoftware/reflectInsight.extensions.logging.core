@@ -15,8 +15,8 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.Extensions.Logging" Version="2.2.0" />
-    <PackageReference Include="Plato.NetCore" Version="2019.3.27.2" />
-    <PackageReference Include="ReflectInsight.Core" Version="6.0.0.6" />
+    <PackageReference Include="Plato.NetCore" Version="2019.4.13.2" />
+    <PackageReference Include="ReflectInsight.Core" Version="6.0.0.7" />
   </ItemGroup>
 
 </Project>
