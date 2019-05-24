@@ -77,7 +77,7 @@ namespace ReflectInsight.Extensions.Logging
         /// <param name="message">The message.</param>
         private void LogSqlCommand(EventId eventId, string message)
         {
-            if (eventId.Id != 20100)
+            if (eventId.Id != 20101)
             {
                 return;
             }
@@ -91,7 +91,22 @@ namespace ReflectInsight.Extensions.Logging
             }
 
             sb.AppendLine();
-            sb.AppendLine($"-- {lines[0]}");
+
+            var idx = lines[0].IndexOf(") [Parameters=");
+
+            if (idx >= 0)
+            {
+                var time = lines[0].Substring(0, idx + 1);
+                var parameters = lines[0].Substring(idx + 2);
+
+                sb.AppendLine($"-- {time}");
+                sb.AppendLine($"-- {parameters}");
+            }
+            else
+            {
+                sb.AppendLine($"-- {lines[0]}");
+            }
+
 
             GetLogger().Send(MessageType.SendSQL, "SQL Command", sb.ToString());
         }
