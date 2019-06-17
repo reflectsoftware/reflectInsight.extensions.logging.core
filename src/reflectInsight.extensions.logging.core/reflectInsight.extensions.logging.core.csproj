@@ -6,7 +6,7 @@
     <RootNamespace>ReflectInsight.Extensions.Logging</RootNamespace>
     <PackageId>ReflectInsight.Extensions.Logging.Core</PackageId>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>6.0.1.3</Version>
+    <Version>6.0.1.4</Version>
   </PropertyGroup>
 
   <ItemGroup>
