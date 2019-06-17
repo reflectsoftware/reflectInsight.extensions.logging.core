@@ -85,26 +85,24 @@ namespace ReflectInsight.Extensions.Logging
             var lines = message.Split(new[] { '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries);
             var sb = new StringBuilder();
 
-            var idx = lines[0].IndexOf(") [Parameters=");
-
-            if (idx >= 0)
-            {
-                var time = lines[0].Substring(0, idx + 1);
-                var parameters = lines[0].Substring(idx + 2);
-
-                sb.AppendLine($"-- {time}");
-                sb.AppendLine();
-            }
 
             for (int i = 1; i < lines.Length; i++)
             {
                 sb.AppendLine(lines[i]);
             }
 
-            sb.AppendLine();            
+            sb.AppendLine();
+
+            var idx = lines[0].IndexOf(") [Parameters=");
+            var time = (string)null;
 
             if (idx >= 0)
-            {                
+            {
+                time = lines[0].Substring(0, idx + 1);
+
+                sb.AppendLine($"-- {time}");
+                sb.AppendLine();
+
                 var parameters = lines[0].Substring(idx + 2);
                 sb.AppendLine($"-- {parameters}");
             }
@@ -113,7 +111,7 @@ namespace ReflectInsight.Extensions.Logging
                 sb.AppendLine($"-- {lines[0]}");
             }
 
-            GetLogger().Send(MessageType.SendSQL, "SQL Command", sb.ToString());
+            GetLogger().Send(MessageType.SendSQL, $"SQL Command {time ?? string.Empty}", sb.ToString());
         }
 
         /// <summary>
