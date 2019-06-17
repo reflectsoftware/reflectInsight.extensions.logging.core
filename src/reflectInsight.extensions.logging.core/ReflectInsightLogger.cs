@@ -94,13 +94,13 @@ namespace ReflectInsight.Extensions.Logging
             sb.AppendLine();
 
             var idx = lines[0].IndexOf(") [Parameters=");
-            var time = (string)null;
+            var msg = "SQL Command";
 
             if (idx >= 0)
             {
-                time = lines[0].Substring(0, idx + 1);
+                msg = lines[0].Substring(0, idx + 1);                
 
-                sb.AppendLine($"-- {time}");
+                sb.AppendLine($"-- {msg}");
                 sb.AppendLine();
 
                 var parameters = lines[0].Substring(idx + 2);
@@ -111,7 +111,7 @@ namespace ReflectInsight.Extensions.Logging
                 sb.AppendLine($"-- {lines[0]}");
             }
 
-            GetLogger().Send(MessageType.SendSQL, $"SQL Command {time ?? string.Empty}", sb.ToString());
+            GetLogger().Send(MessageType.SendSQL, msg, sb.ToString());
         }
 
         /// <summary>
