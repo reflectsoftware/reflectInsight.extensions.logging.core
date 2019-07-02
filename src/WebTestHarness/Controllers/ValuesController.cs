@@ -23,7 +23,7 @@ namespace WebTestHarness.Controllers
         [HttpGet]
         public ActionResult<IEnumerable<string>> Get()
         {
-            _logger.LogJSON("Hello", new { });
+            _logger.LogJSON("Hello", new string[] { "value1", "value2" });
 
             return new string[] { "value1", "value2" };
         }
