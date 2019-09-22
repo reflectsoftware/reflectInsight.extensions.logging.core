@@ -7,6 +7,8 @@
     <PackageId>ReflectInsight.Extensions.Logging.Core</PackageId>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Version>6.0.1.4</Version>
+    <AssemblyVersion>6.0.1.5</AssemblyVersion>
+    <FileVersion>6.0.1.5</FileVersion>
   </PropertyGroup>
 
   <ItemGroup>
@@ -15,8 +17,8 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.Extensions.Logging" Version="2.2.0" />
-    <PackageReference Include="Plato.NetCore" Version="2019.7.3.1" />
-    <PackageReference Include="ReflectInsight.Core" Version="6.0.1" />
+    <PackageReference Include="Plato.NetCore" Version="2019.9.22.3" />
+    <PackageReference Include="ReflectInsight.Core" Version="6.0.2" />
   </ItemGroup>
 
 </Project>
