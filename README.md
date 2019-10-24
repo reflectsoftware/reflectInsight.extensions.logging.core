@@ -1,7 +1,7 @@
 # ReflectInsight.Extensions.Logging
 
 [![NuGet Version](http://img.shields.io/nuget/v/ReflectInsight.Extensions.Logging.svg?style=flat)](http://www.nuget.org/packages/reflectinsight.extensions.logging.core/) 
-[![Release](https://img.shields.io/github/release/aspnet-plus/AspNet.Plus.Logging.svg)](https://github.com/reflectsoftware/reflectinsight.extensions.logging.core/releases/latest)
+[![Release](https://img.shields.io/github/stars/reflectsoftware/reflectinsight.extensions.Logging.svg)](https://github.com/reflectsoftware/reflectinsight.extensions.logging.core/releases/latest)
 [![Stars](https://img.shields.io/github/stars/reflectsoftware/reflectinsight.extensions.Logging.svg)](https://github.com/reflectsoftware/reflectinsight.extensions.logging.core/stargazers) 
 [![Stack Overflow](https://img.shields.io/badge/stack%20overflow-reflectinsight-orange.svg)](http://stackoverflow.com/questions/tagged/reflectinsight)
 
