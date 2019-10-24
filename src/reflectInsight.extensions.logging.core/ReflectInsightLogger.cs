@@ -3,7 +3,6 @@
 // Licensed under the Apache License, Version 2.0. See License.txt in the project root for license information. 
 
 using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Logging.Internal;
 using Plato.Strings;
 using ReflectSoftware.Insight;
 using ReflectSoftware.Insight.Common;
@@ -49,8 +48,7 @@ namespace ReflectInsight.Extensions.Logging
         /// </returns>
         public IDisposable BeginScope<TState>(TState state)
         {
-            var formatter = (state as FormattedLogValues);
-            var message = formatter?.ToString() ?? (state.ToString() ?? string.Empty);
+            var message = state.ToString() ?? string.Empty;
             
             if(message.IndexOf("Microsoft.EntityFrameworkCore", StringComparison.OrdinalIgnoreCase) >= 0)
             {
