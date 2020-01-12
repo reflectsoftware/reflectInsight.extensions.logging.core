@@ -6,9 +6,9 @@
     <RootNamespace>ReflectInsight.Extensions.Logging</RootNamespace>
     <PackageId>ReflectInsight.Extensions.Logging.Core</PackageId>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>6.0.2.0</Version>
-    <AssemblyVersion>6.0.2.0</AssemblyVersion>
-    <FileVersion>6.0.2.0</FileVersion>
+    <Version>6.0.3.0</Version>
+    <AssemblyVersion>6.0.3.0</AssemblyVersion>
+    <FileVersion>6.0.3.0</FileVersion>
   </PropertyGroup>
 
   <ItemGroup>

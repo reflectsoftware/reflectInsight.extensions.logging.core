@@ -24,7 +24,7 @@ namespace WebTestHarness
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ILoggerFactory loggerFactory)
         {
-            loggerFactory.AddReflectInsight("ReflectInsight.config");
+            loggerFactory.AddReflectInsight();
 
             if (env.IsDevelopment())
             {
@@ -32,9 +32,7 @@ namespace WebTestHarness
             }
 
             app.UseRouting();
-
             app.UseAuthorization();
-
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();

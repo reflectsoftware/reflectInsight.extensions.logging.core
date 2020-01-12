@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.Logging;
+using ReflectInsight.Extensions.Logging;
 
 namespace WebTestHarness
 {
@@ -12,6 +14,11 @@ namespace WebTestHarness
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
-                .UseStartup<Startup>();
+             //.ConfigureLogging(logging =>
+             //{
+             //    logging.AddConsole();
+             //    logging.AddReflectInsight();
+             //})
+            .UseStartup<Startup>();
     }
 }
