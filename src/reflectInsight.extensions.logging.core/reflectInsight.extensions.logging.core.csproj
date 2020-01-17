@@ -6,9 +6,9 @@
     <RootNamespace>ReflectInsight.Extensions.Logging</RootNamespace>
     <PackageId>ReflectInsight.Extensions.Logging.Core</PackageId>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>6.0.7.0</Version>
-    <AssemblyVersion>6.0.7.0</AssemblyVersion>
-    <FileVersion>6.0.7.0</FileVersion>
+    <Version>6.1.0</Version>
+    <AssemblyVersion>6.1.0.0</AssemblyVersion>
+    <FileVersion>6.1.0.0</FileVersion>
   </PropertyGroup>
 
   <ItemGroup>
@@ -16,8 +16,8 @@
   </ItemGroup>
 
   <ItemGroup>    
-    <PackageReference Include="Plato.NetCore" Version="2020.1.16.2" />
-    <PackageReference Include="ReflectInsight.Core" Version="6.0.8" />
+    <PackageReference Include="Plato.NetCore" Version="2020.1.16.3" />
+    <PackageReference Include="ReflectInsight.Core" Version="6.1.0" />
   </ItemGroup>
 
 </Project>
